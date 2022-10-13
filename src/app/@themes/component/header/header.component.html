@@ -1,0 +1,38 @@
+<div class="header-container">
+  <div class="phone-container">
+    <i class="fa fa-phone-square" aria-hidden="true"></i> <span>Hotline: 0947.215.788 | 0985.925.148</span>
+  </div>
+  <div class="user-container" *ngIf="isLogin; else noLogin">
+    <div><i class="fa fa-user-circle-o" aria-hidden="true"></i> <span>{{ 'Juse Hoàng' }}</span></div> &nbsp;|&nbsp;
+    <a [routerLink]="['auth', 'logout']" routerLinkActive="active"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span>Giỏ hàng {{ 0 }}</span></a>
+  </div>
+</div>
+<div class="banner">
+  <div class="logo">
+    <img src="../../../../assets/images/text-1663342200227.png" alt="">
+    <div class="slogan">
+      <span>Mang những bữa cơm ngon đến với mọi nhà</span>
+    </div>
+  </div>
+</div>
+<div class="nab-bar">
+  <div class="main-menu">
+    <ul>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Trang chủ</li></a>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Giới thiệu</li></a>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Sản phẩm</li></a>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Không gian quán</li></a>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Thực đơn</li></a>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Vào Bếp</li></a>
+      <a [routerLink]="['']" routerLinkActive="active-nab-bar" [routerLinkActiveOptions]="{ exact: true }"><li>Liên hệ</li></a>
+    </ul>
+  </div>
+</div>
+<ng-template #noLogin>
+   <div class="login-container">
+    <a [routerLink]="['auth', 'login']" routerLinkActive="active"><i class="fa fa-sign-in" aria-hidden="true"></i> <span>Đăng nhập</span></a> &nbsp;| &nbsp;
+     <a [routerLink]="['auth', 'logout']" routerLinkActive="active"><i class="fa fa-user" aria-hidden="true"></i> <span>Đăng kí</span></a> &nbsp;|&nbsp;
+     <a [routerLink]="['auth', 'logout']" routerLinkActive="active"><i class="fa fa-cart-arrow-down" aria-hidden="true"></i> <span>Giỏ hàng {{ 0 }}</span></a>
+   </div>
+</ng-template>
+

@@ -4,6 +4,9 @@
   background-color: rgba(0,0,0,0.5);
   color: #fff;
   padding: 3px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
 
   .phone-container {
     width: 50%;
@@ -76,9 +79,6 @@
 }
 
 .banner {
-  background-image: url('../../../assets/images/banner-01.jpg');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   height: 500px;
   display: flex;
   flex-direction: column;
@@ -86,6 +86,12 @@
   align-items: center;
   text-align: center;
   width: 100%;
+  position: relative;
+  z-index: -9999;
+
+  .carousel {
+    width: 100%;
+  }
 
   span {
     color: #fff;
@@ -94,10 +100,31 @@
   }
 }
 
+.logo {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+
+  hr {
+    width: 5%;
+  }
+
+  .slogan {
+    span {
+      text-transform: uppercase;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+    }
+  }
+}
+
 .nab-bar {
   display: flex;
   justify-content: center;
-  margin-top: -25px;
+  margin-top: -30px;
 
   .main-menu {
     background-color: #1DC483;
@@ -116,12 +143,12 @@
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: 1px;
         display: inline-block;
 
         li {
           padding: 15px 25px;
           font-size: 16px;
+          font-weight: 500;
         }
       }
 
@@ -140,8 +167,8 @@
   background-color: #fff;
   border-radius: 100%;
   position: absolute;
-  top: 54.8%;
-  left: 16%;
+  top: 58.6%;
+  left: 21%;
 }
 
 .nab-bar::after {
@@ -151,8 +178,15 @@
   background-color: #fff;
   border-radius: 100%;
   position: absolute;
-  top: 54.8%;
-  right: 16%;
+  top: 58.6%;
+  right: 21%;
+}
+
+.border-clear-fix {
+  height: 5px;
+  width: 100%;
+  background: url('../../../../assets/images/border-slide.webp') repeat-x;
+  margin-top: 51px;
 }
 
 @media only screen and (max-width: 480px) {
@@ -167,11 +201,6 @@
   }
 
   .banner {
-    .logo {
-      img {
-        width: 100%;
-      }
-    }
   }
 
   .nab-bar {
@@ -180,9 +209,9 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .banner {
-    height: 300px;
-  }
+  // .banner {
+  //   height: 300px;
+  // }
 
   .nab-bar {
     margin-top: -20px;

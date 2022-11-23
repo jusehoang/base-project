@@ -1,3 +1,5 @@
+import { Injector } from '@angular/core';
+import { SimpleBaseComponent } from 'src/app/@core/base/simple.base.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,9 +7,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss']
 })
-export class PageComponent implements OnInit {
+export class PageComponent extends SimpleBaseComponent implements OnInit {
 
-  constructor() { }
+  constructor(injector: Injector) {
+    super(injector);
+  }
 
   ngOnInit(): void {
   }

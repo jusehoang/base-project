@@ -1,9 +1,12 @@
-import { Component, Injector, OnDestroy } from "@angular/core";
+import { Component, Injectable, Injector, OnDestroy } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { each, reject } from "lodash";
 import { Observable, Subscription } from "rxjs";
 import { MessageService } from "src/app/@service/message.service";
 
+@Injectable({
+  providedIn: "root"
+})
 @Component({
   template: ''
 })
@@ -41,6 +44,4 @@ export class SimpleBaseComponent implements OnDestroy {
   ngOnDestroy(): void {
     this.rxUnSubscribeAll();
   }
-
-
 }

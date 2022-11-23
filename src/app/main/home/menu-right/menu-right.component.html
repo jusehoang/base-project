@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="category">
+    <div class="block-category">
+      <div class="title">
+        <h2>Danh mục</h2>
+      </div>
+      <div class="category-content">
+        <ul>
+          <li>
+            <a [routerLink]="['']">Hoa quả sạch</a>
+          </li>
+          <li>
+            <a [routerLink]="['']">Rau sạch</a>
+          </li>
+          <li>
+            <a [routerLink]="['']">Thịt sạch</a>
+          </li>
+          <li>
+            <a [routerLink]="['']">Thủy - Hải sản sạch</a>
+          </li>
+          <li>
+            <a [routerLink]="['']" style="border-bottom: none">Gạo - Hạt khô</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="news">
+    <div class="block-news">
+      <div class="title">
+        <h2>Tin mới</h2>
+      </div>
+      <div class="news-content">
+        <ul>
+          <li>
+            <a [routerLink]="['']">Cách nhận biết chuối chín tự nhiên và chuối chín do nhúng hóa chất</a>
+          </li>
+          <li>
+            <a [routerLink]="['']">Những người này không nên ăn dứa trong đông</a>
+          </li>
+          <li>
+            <a [routerLink]="['']">3 bí quyết lựa chọn thực phẩm sạch</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="block-policy">
+    <div class="policy"><a [routerLink]="['']"><i class="fa fa-shield" aria-hidden="true"></i> Chính sách bảo mật</a></div>
+    <div class="policy"><a [routerLink]="['']"><i class="fa fa-truck" aria-hidden="true"></i>Chính sách giao hàng</a></div>
+    <div class="policy"><a [routerLink]="['']"><i class="fa fa-shopping-basket" aria-hidden="true"></i>Chính sách mua hàng</a></div>
+  </div>
+  <!-- <div class="related-products">
+    <div class="block-related-product">
+      <div class="title">
+        <h2>Sản phẩm  liên quan</h2>
+      </div>
+      <div class="product-content">
+        <ul>
+          <li *ngFor="let product of products">
+            <a [routerLink]="['']">
+              <div class="product">
+                <div class="image">
+                  <img [src]="product.image" alt="">
+                </div>
+                <div class="content">
+                  <div class="price-box">
+                    <h2>{{ product.name }}</h2>
+                    <span><small>Giá: </small><b>{{ product.cost | currency }}</b></span>
+                    <button class="button">
+                      <span>Xem chi tiết</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+</div>

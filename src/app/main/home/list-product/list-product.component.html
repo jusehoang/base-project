@@ -1,0 +1,33 @@
+<div class="content-title">
+  <h3><ng-content></ng-content></h3>
+</div>
+<div class="list-product">
+  <div class="product" *ngFor="let product of products">
+    <div class="image">
+      <img [src]="product.image" alt="">
+      <div class="product-sale" *ngIf="product.isSale">
+        <span>{{product.percentSale | percentPipe }}</span>
+        <i class="fa fa-star" aria-hidden="true"></i>
+      </div>
+    </div>
+    <div class="content">
+      <div class="price-box">
+        <h2>{{ product.name }}</h2>
+        <!-- <ng-container *ngIf="product.isSale">
+          <p [class.high-light-price]="product.isSale"><small><i>Giá: </i></small>{{ product.costSale }}đ</p>
+        </ng-container> -->
+        <p [class.high-light-price]="product.isSale"><small><i>Giá: </i></small>{{ product.costSale }}đ</p>
+        <span [class.hide-price]="product.isSale"><small>Giá: </small><b>{{ product.cost | currencyPipe }}đ</b></span>
+        <button class="button">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <span>Mua hàng</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="pagination">
+  <nz-pagination [nzPageIndex]="1" [nzTotal]="500" [nzPageSize]="6"></nz-pagination>
+</div>
+<div class="end-border"></div>
+

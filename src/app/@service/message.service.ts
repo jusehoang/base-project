@@ -1,13 +1,13 @@
+import { subscribeable } from './../@core/base/subscribeable';
 import { Injectable, Injector } from "@angular/core";
 import { assignIn } from "lodash";
 import { ModalOptions, NzModalRef, NzModalService } from 'ng-zorro-antd/modal';
 import { BehaviorSubject, Observable, Subscriber } from "rxjs";
-import { SimpleBaseComponent } from "../@core/base/simple.base.component";
 
 @Injectable({
   providedIn: 'root'
 })
-export class MessageService extends SimpleBaseComponent {
+export class MessageService extends subscribeable(Object) {
   private readonly messageObj$ = new BehaviorSubject<any>(null);
   private readonly messages: Message[] = [];
   constructor(injector: Injector, private readonly modalService: NzModalService) {

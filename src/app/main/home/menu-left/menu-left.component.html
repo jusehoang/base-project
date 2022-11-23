@@ -1,0 +1,37 @@
+<div class="menu-banner">
+  <div class="phone-number">
+    <div class="icon">
+      <i class="fa fa-phone-square" aria-hidden="true"></i>
+    </div>
+    <div class="phone">
+      <span>Đặt hàng nhanh</span>
+      <br>
+      <span>0963.647.129</span>
+    </div>
+  </div>
+  <div class="align-content">
+    <p>Bạn chọn 1 trong 2 cách để mua hàng</p>
+    <span>
+      <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+      Hoặc
+      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+    </span>
+  </div>
+  <div class="cart">
+    <div class="icon">
+      <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+    </div>
+    <div class="text">
+      <a [routerLink]="['']">
+        <span>Giỏ hàng</span>
+        <br>
+        <strong>{{ 0 }} sản phẩm</strong></a>
+    </div>
+  </div>
+</div>
+<div class="new-product-container">
+  <app-list-product>Sản phẩm mới</app-list-product>
+</div>
+<div class="new-product-container">
+  <app-list-product>Sản phẩm khuyến mại</app-list-product>
+</div>

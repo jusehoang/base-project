@@ -1,3 +1,4 @@
+import { ThemeModule } from './@themes/component/theme.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,15 +11,14 @@ import vi from '@angular/common/locales/vi';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ComponentModule } from './@themes/component/component.module';
-import { PageComponent } from './page/page.component';
+import { GlobalHttpInterceptor } from './@core/interceptor/http.interceptor';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 registerLocaleData(vi);
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,13 +26,15 @@ registerLocaleData(vi);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    ComponentModule
+    NgxSpinnerModule.forRoot({type: 'ball-clip-rotate'}),
+    ThemeModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: vi_VN },
     {
       provide: HTTP_INTERCEPTORS,
-      useClass:
+      useClass: GlobalHttpInterceptor,
+      multi: true
     }
   ],
   bootstrap: [AppComponent]

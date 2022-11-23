@@ -1,12 +1,13 @@
 export interface Product {
   id: string;
-  name: string;
+  name?: string;
   description?: string;
-  cost: number;
+  cost?: number;
   image?: string;
-  isSale: boolean;
+  isSale?: boolean;
   costSale?: number;
   percentSale?: number;
-  sellNumber: number;
-  createdDate: Date;
+  sellNumber?: number;
+  createdDate?: Date;
+  isNew?: boolean;
 }

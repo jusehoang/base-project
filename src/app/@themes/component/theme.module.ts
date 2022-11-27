@@ -5,6 +5,7 @@ import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
+import { NzFormModule } from 'ng-zorro-antd/form';
 
 // const COMPONENTS = [
 //   // SimpleBaseComponent
@@ -16,7 +17,8 @@ const MODULES = [
   NzGridModule,
   NzMessageModule,
   NzModalModule,
-  NzPaginationModule
+  NzPaginationModule,
+  NzFormModule
 ]
 
 @NgModule({

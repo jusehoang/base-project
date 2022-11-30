@@ -6,10 +6,7 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
 import { NzModalModule } from 'ng-zorro-antd/modal';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzFormModule } from 'ng-zorro-antd/form';
-
-// const COMPONENTS = [
-//   // SimpleBaseComponent
-// ]
+import { NzInputModule } from 'ng-zorro-antd/input';
 
 const MODULES = [
   NzButtonModule,
@@ -18,11 +15,11 @@ const MODULES = [
   NzMessageModule,
   NzModalModule,
   NzPaginationModule,
-  NzFormModule
+  NzFormModule,
+  NzInputModule
 ]
 
 @NgModule({
-  // declarations: [...COMPONENTS],
   imports: [...MODULES],
   exports: [...MODULES]
 })

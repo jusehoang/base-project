@@ -10,13 +10,9 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 
 const MODULES = [
   NzButtonModule,
-  NzCarouselModule,
   NzGridModule,
   NzMessageModule,
   NzModalModule,
-  NzPaginationModule,
-  NzFormModule,
-  NzInputModule
 ]
 
 @NgModule({

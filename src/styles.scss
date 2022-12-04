@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: font-muli;
+  src: url('../src/assets/font/Mulish-ExtraLight.ttf');
+}
 body {
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: font-muli;
+  font-size: 18px;
 }

@@ -1,7 +1,36 @@
 <div class="header-container">
   <div class="logo">
     <a [routerLink]="['']">
-      <img width="200" height="90" src="../../../../assets/images/logo.png" alt="logo">
+      <img width="112" height="70" src="../../../../assets/images/logo.png" alt="logo">
     </a>
   </div>
+  <div class="right-container">
+    <div class="icon-search">
+      <div class="icon">
+        <span nz-icon nzType="search" style="font-size: 1.1em" nzTheme="outline"></span>
+      </div>
+      <div class="dropdown-search">
+        <div class="input-search-container">
+          <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input type="text" nz-input placeholder="Tìm kiếm ..." />
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button *ngIf="!showLoading" nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>
+            <button *ngIf="showLoading" nz-button nzType="primary"><span nz-icon nzType="loading"></span></button>
+          </ng-template>
+        </div>
+        <div class="show-list-product"></div>
+      </div>
+    </div>
+    <div class="header-divider"></div>
+    <div class="icon-user">
+      <i class="fa fa-user" aria-hidden="true"></i>
+    </div>
+    <div class="header-divider"></div>
+    <div class="cart">
+      <span class="cart-price">{{ totalPrice }}&nbsp;đ</span>
+      <span class="cart-icon"><strong>{{ totalItem }}</strong></span>
+    </div>
+  </div>
 </div>
+

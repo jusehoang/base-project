@@ -1,4 +1,3 @@
-
 // Custom Theming for NG-ZORRO
 // For more information: https://ng.ant.design/docs/customize-theme/en
 @import "../node_modules/ng-zorro-antd/ng-zorro-antd.less";
@@ -6,10 +5,12 @@
 // Override less variables to here
 // View all variables: https://github.com/NG-ZORRO/ng-zorro-antd/blob/master/components/style/themes/default.less
 
-@primary-color: #1dc483;
+@primary-color: #cbba9c;
 // @pagination-item-bg: #1dc483;
 // @pagination-item-bg-active: #1dc483;
 @btn-border-radius-base: 30px;
+// @font-family: "Muli", sans-serif;
+
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -29,4 +30,49 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: @primary-color;
+}
+
+.ant-btn-primary:hover {
+  background-color: #665e4f;
+}
+
+.ant-btn-primary {
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  text-align: center;
+  font-weight: bolder;
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-shadow: none;
+  display: block;
+}
+
+.ant-input {
+  border: 1px solid #ddd;
+  padding: 5px 0.75em;
+  border-radius: 0;
+  vertical-align: middle;
+  background-color: #fff;
+  color: #333;
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+  transition: color .3s, border .3s, background .3s, opacity .3s;
+  font-size: 16px;
+}
+
+.ant-input:focus {
+  box-shadow: 0 0 5px #ccc;
+  opacity: 1 !important;
+  outline: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+.anticon {
+  font-size: 16px;
+}
+
+.ant-btn-icon-only {
+  width: 36px;
+  height: 36px;
 }

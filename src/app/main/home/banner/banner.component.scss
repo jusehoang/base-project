@@ -1,17 +1,103 @@
-@import 'swiper/scss';
-@import 'swiper/scss/navigation';
-@import 'swiper/scss/pagination';
-@import 'swiper/scss/autoplay';
+// @import 'swiper/scss';
+// @import 'swiper/scss/navigation';
+// @import 'swiper/scss/autoplay';
 
-.swiper {
-  width: 100%;
-  height: 100%;
-}
+// .swiper {
+//   width: 100%;
+//   height: 100%;
+// }
+
+// // ::ng-deep .banner-container {
+// //   .slide-container {
+// //     .image.container {
+// //       overflow: hidden;
+// //       img {
+// //         width: 100%;
+// //         height: 100%;
+// //       }
+// //     }
+// //   }
+// // }
+
+// .swiper-slide-active {
+//   transform: scale(1.2);
+//   transition: transform 20s;
+// }
+
+// .swiper-button-prev {
+//   left: 10px;
+//   background-color: #cbba9c;
+//   border-radius: 50px;
+//   padding: 22px;
+//   opacity: 0 !important;
+//   transition: opacity 0.3s;
+// }
+
+// .swiper-button-prev:hover {
+//   opacity: 1 !important;
+// }
+
+// .swiper-button-next {
+//   background-color: #cbba9c;
+//   border-radius: 50px;
+//   padding: 22px;
+//   opacity: 0 !important;
+//   transition: opacity 0.3s;
+// }
+
+// .swiper-button-next:hover {
+//   opacity: 1 !important;
+// }
+
+// .swiper-button-prev::after {
+//   color: #fff !important;
+//   font-size: 20px !important;
+// }
+
+// .swiper-button-next::after {
+//   color: #fff !important;
+//   font-size: 20px !important;
+// }
 
 .banner-container {
-  img {
-    width: 100%;
-    height: 100%;
+  height: 800px;
+  position: relative;
+  .image-container {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .button-prev {
+    position: absolute;
+    left: 10px;
+    top: 49%;
+    outline: none;
+    background-color: #cbba9c;
+    color: #fff;
+    border-radius: 50px;
+    padding: 9px 11px;
+    border: none;
+
+    [nz-icon] {
+      font-size: 25px;
+    }
+  }
+
+  .button-next {
+    position: absolute;
+    right: 10px;
+    top: 49%;
+    outline: none;
+    background-color: #cbba9c;
+    color: #fff;
+    border-radius: 50px;
+    padding: 9px 11px;
+    border: none;
+
+    [nz-icon] {
+      font-size: 25px;
+    }
   }
 }
-

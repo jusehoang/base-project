@@ -1,10 +1,32 @@
 <div class="banner-container">
-  <swiper [navigation]="true" [autoplay]="true">
+  <!-- <swiper [navigation]="true" [autoplay]="true" [virtual]="true">
     <ng-template swiperSlide>
-      <img src="../../../../assets/images/slider1.jpg" alt="">
+      <div class="slide-container">
+        <div class="image-container">
+          <img src="../../../../assets/images/slider1.jpg" alt="">
+        </div>
+        <div class="content-container"></div>
+      </div>
     </ng-template>
     <ng-template swiperSlide>
-      <img src="../../../../assets/images/slider2.jpg" alt="">
+      <div class="image-container">
+        <img src="../../../../assets/images/slider2.jpg" alt="">
+      </div>
     </ng-template>
-  </swiper>  
+  </swiper> -->
+  <nz-carousel [nzDots]="false">
+    <div nz-carousel-content>
+      <div class="image-container">
+        <img src="../../../../assets/images/slider1.jpg" alt="">
+      </div>
+      <div class="content-container"></div>
+    </div>
+    <div nz-carousel-content>
+      <div class="image-container">
+        <img src="../../../../assets/images/slider2.jpg" alt="">
+      </div>
+    </div>
+  </nz-carousel>
+  <button class="button-prev" (click)="goPrevSlide()"><span nz-icon nzType="left" nzTheme="outline"></span></button>
+  <button class="button-next" (click)="goNextSlide()"><span nz-icon nzType="right" nzTheme="outline"></span></button>
 </div>

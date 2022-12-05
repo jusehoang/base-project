@@ -9,13 +9,15 @@ import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
+
 const MODULES = [
   NzButtonModule,
   NzGridModule,
   NzMessageModule,
   NzModalModule,
   NzIconModule,
-  NzInputModule
+  NzInputModule,
+  NzCarouselModule
 ]
 
 @NgModule({

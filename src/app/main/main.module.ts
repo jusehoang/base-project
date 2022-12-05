@@ -6,18 +6,22 @@ import { HomeComponent } from './home/home.component';
 import { ThemeModule } from "../@themes/component/theme.module";
 import { PercentPipe } from "../@core/pipes/percent.pipe";
 import { CurrencyPipe } from "../@core/pipes/currency.pipe";
+import { BannerComponent } from './home/banner/banner.component';
+import { SwiperModule } from "swiper/angular";
 
 @NgModule({
   declarations: [
     MainComponent,
     HomeComponent,
     PercentPipe,
-    CurrencyPipe
+    CurrencyPipe,
+    BannerComponent
   ],
   imports: [
     MainRoutingModule,
     CommonModule,
-    ThemeModule
+    ThemeModule,
+    SwiperModule
   ]
 })
 export class MainModule {}

@@ -78,6 +78,7 @@
 .nav-bar-container {
   background-color: #353535;
   font-weight: 600;
+  position: sticky;
 
   ul {
     list-style-type: none;
@@ -123,6 +124,6 @@
   }
 
   .highlight {
-
+    color: #cbba9c;
   }
 }

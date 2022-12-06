@@ -63,41 +63,353 @@
   height: 800px;
   position: relative;
   .image-container {
+    position: relative;
+    overflow: hidden;
     img {
       width: 100%;
-      height: 100%;
+      height: 800px;
+      object-fit: cover;
     }
   }
 
   .button-prev {
     position: absolute;
-    left: 10px;
+    left: 25px;
     top: 49%;
     outline: none;
     background-color: #cbba9c;
     color: #fff;
     border-radius: 50px;
-    padding: 9px 11px;
+    padding: 3px 9px;
     border: none;
+    opacity: 0;
+    transition: opacity 0.3s;
 
     [nz-icon] {
-      font-size: 25px;
+      font-size: 15px;
     }
   }
 
   .button-next {
     position: absolute;
-    right: 10px;
+    right: 25px;
     top: 49%;
     outline: none;
     background-color: #cbba9c;
     color: #fff;
     border-radius: 50px;
-    padding: 9px 11px;
+    padding: 3px 9px;
     border: none;
+    opacity: 0;
+    transition: opacity 0.3s;
 
     [nz-icon] {
-      font-size: 25px;
+      font-size: 15px;
+    }
+  }
+
+  .button-next:hover {
+    opacity: 1;
+  }
+
+  .button-prev:hover {
+    opacity: 1;
+  }
+
+  .slick-active {
+    .image-container {
+      img {
+        animation-name: scaleImage;
+        animation-duration: 20s;
+        animation-fill-mode: forwards;
+      }
+    }
+
+    .content-container {
+      animation-name: slideLeft;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+    }
+
+    .content-container-slide-two {
+      animation-name: slideTop;
+      animation-duration: 3s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes scaleImage {
+    from { transform: scale(1);}
+    to { transform: scale(1.2);}
+  }
+
+  @keyframes slideLeft {
+    from { opacity: 0; left: 30%; }
+    to { opacity: 1; left: 22%; }
+  }
+
+  @keyframes slideTop {
+    from { opacity: 0; top: 75%; }
+    to { opacity: 1; top: 65%; }
+  }
+
+  .content-container {
+    position: absolute;
+    top: 32%;
+    color: #cbba9c;
+    width: 620px;
+    left: 30%;
+
+    .content {
+      padding: 0 25px;
+      border-left: #cbba9c 2px solid;
+
+      h6 {
+        color: #cbba9c;
+        margin-bottom: 15px;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-size: 20px;
+      }
+
+      h3 {
+        color: #cbba9c;
+        margin-bottom: 15px;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-size: 38.4px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 17.5px;
+      }
+    }
+  }
+
+  .button {
+    .button-banner {
+      color: #cbba9c;
+      padding: 9px 28px;
+      font-weight: bold;
+      font-size: 16px;
+      margin-top: 20px;
+      // background-color: rgba(104, 95, 82, 0.77);
+      background-color: transparent;
+      border: #cbba9c 2px solid;
+      transition: all 0.4s ease-in-out;
+      position: relative;
+    }
+
+    .button-banner:hover {
+      color: #fff;
+      background-color: #685f52;
+      border: #685f52 2px solid;
+    }
+
+    .button-banner::before {
+      content: '';
+      border: 2px solid #cbba9c;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      position: absolute;
+      opacity: 0;
+      transition: 0.3s opacity;
+      cursor: pointer;
+    }
+
+    .button-banner:hover::before {
+      opacity: 1;
+    }
+  }
+
+  .content-container-slide-two {
+    position: absolute;
+    top: 65%;
+    color: #cbba9c;
+    width: 742px;
+    left: 45%;
+
+    .content {
+      padding: 0 25px;
+      border-left: #cbba9c 2px solid;
+
+      h6 {
+        color: #cbba9c;
+        margin-bottom: 13px;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-size: 20px;
+      }
+
+      h3 {
+        color: #cbba9c;
+        margin-bottom: 13px;
+        letter-spacing: 0.05em;
+        text-rendering: optimizeSpeed;
+        font-size: 38.4px;
+        font-weight: bold;
+      }
+
+      p {
+        font-size: 17.5px;
+      }
+    }
+  }
+}
+
+.banner-container-two {
+  display: flex;
+  width: 100%;
+  height: 576px;
+
+  .banner-left {
+    flex: 1;
+    position: relative;
+
+    .image-container {
+      overflow: hidden;
+      img {
+        height: 576px;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.6s transform;
+      }
+    }
+
+    .content-container {
+      position: absolute;
+      top: 68%;
+      left: 5%;
+
+      h1 {
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 0;
+        font-size: 24px;
+        letter-spacing: 0.05em;
+      }
+
+      p {
+        color: #fff;
+        margin-bottom: 8.5px;
+        font-size: 14.5px;
+      }
+    }
+  }
+
+  .banner-left:hover {
+    .image-container {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .banner-center {
+    flex: 1;
+
+    .center-top {
+
+      .image-container {
+        overflow: hidden;
+        img {
+          height: 288px;
+          width: 100%;
+          object-fit: cover;
+          transition: 0.6s transform;
+        }
+      }
+    }
+
+    .center-top:hover {
+      .image-container {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .center-bottom {
+
+      .image-container {
+        overflow: hidden;
+
+        img {
+          height: 288px;
+          width: 100%;
+          object-fit: cover;
+          transition: 0.6s transform;
+        }
+      }
+    }
+
+    .center-bottom:hover {
+      .image-container {
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  .banner-right {
+    flex: 1;
+    .image-container {
+      overflow: hidden;
+      img {
+        height: 576px;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.6s transform;
+      }
+    }
+  }
+
+  .banner-right:hover {
+    .image-container {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .button {
+    .button-banner {
+      color: #cbba9c;
+      padding: 9px 28px;
+      font-weight: bold;
+      font-size: 13px;
+      // background-color: rgba(104, 95, 82, 0.77);
+      background-color: transparent;
+      border: #cbba9c 2px solid;
+      transition: all 0.4s ease-in-out;
+      position: relative;
+    }
+
+    .button-banner:hover {
+      color: #fff;
+      background-color: #685f52;
+      border: #685f52 2px solid;
+    }
+
+    .button-banner::before {
+      content: '';
+      border: 2px solid #cbba9c;
+      top: 4px;
+      left: 4px;
+      right: 4px;
+      bottom: 4px;
+      position: absolute;
+      opacity: 0;
+      transition: 0.3s opacity;
+      cursor: pointer;
+    }
+
+    .button-banner:hover::before {
+      opacity: 1;
     }
   }
 }

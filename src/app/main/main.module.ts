@@ -8,6 +8,7 @@ import { PercentPipe } from "../@core/pipes/percent.pipe";
 import { CurrencyPipe } from "../@core/pipes/currency.pipe";
 import { BannerComponent } from './home/banner/banner.component';
 import { SwiperModule } from "swiper/angular";
+import { ProductsComponent } from './home/products/products.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SwiperModule } from "swiper/angular";
     HomeComponent,
     PercentPipe,
     CurrencyPipe,
-    BannerComponent
+    BannerComponent,
+    ProductsComponent
   ],
   imports: [
     MainRoutingModule,

@@ -1,0 +1,23 @@
+.product-container {
+  text-align: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #cbba9c;
+    font-size: 50px;
+
+    span {
+      color: black;
+    }
+  }
+
+  .gap-element {
+    padding-top: 30px;
+  }
+}

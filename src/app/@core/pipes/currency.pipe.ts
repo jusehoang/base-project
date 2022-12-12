@@ -16,8 +16,11 @@ export class CurrencyPipe implements PipeTransform {
     for (let i = currency.length - 1; i >= 0; i--) {
       str = currency[i] + str;
       count++;
+      if (i === 0) {
+        break;
+      }
       if (count === 3) {
-        str = '.' + str;
+        str = ',' + str;
         count = 0;
       }
     }

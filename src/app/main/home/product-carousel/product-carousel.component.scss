@@ -1,0 +1,233 @@
+::ng-deep .list-product-special {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h2 {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-weight: bold;
+    font-family: 'arial black', sans-serif;
+    ;
+    color: #cbba9c;
+    font-size: 50px;
+
+    span {
+      color: black;
+    }
+  }
+
+  .ant-carousel .slick-dots {
+    bottom: 0px;
+  }
+
+  .ant-carousel .slick-dots li {
+    border: 3px solid #cbba9c;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .ant-carousel .slick-dots li:hover {
+    border: rgb(58, 58, 58) 3px solid;
+    ;
+  }
+
+  .ant-carousel .slick-dots li button {
+    height: 0;
+  }
+
+  .ant-carousel .slick-dots li.slick-active {
+    background-color: rgb(58, 58, 58);
+    border: rgb(58, 58, 58) 3px solid;
+  }
+
+  .carousel {
+    width: calc(120rem - 733px);
+    margin: auto;
+    box-shadow: 0 3px 6px -4px rgb(0 0 0 / 16%), 0 3px 6px rgb(0 0 0 / 23%);
+    height: 540px;
+
+    nz-carousel {
+      width: 100%;
+      height: 100%;
+    }
+
+    [nz-carousel-content] {
+      overflow: hidden;
+    }
+
+    .carousel-content {
+      width: 100%;
+      display: flex;
+      height: 100%;
+      position: relative;
+
+      .image-container {
+        flex: 1;
+
+        img {
+          width: 100%;
+          height: 500px;
+          padding-right: 15%;
+        }
+
+        .sale-container {
+          position: absolute;
+          top: 10%;
+          left: 20px;
+          padding: 10px 7px;
+          border: #cbba9c 1px solid;
+          border-radius: 50%;
+          background-color: #cbba9c;
+          color: #fff;
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        .sale-padding {
+          padding: 10px 2px;
+        }
+
+        .button-prev {
+          position: absolute;
+          top: 48%;
+          left: 6%;
+          opacity: 0;
+          transition: all 0.3s;
+
+          button {
+            border: 2px solid black;
+            outline: none;
+            background-color: #fff;
+            color: #111;
+            border-radius: 50%;
+            padding: 8px 8px;
+            cursor: pointer;
+
+            [nz-icon] {
+              display: flex;
+              font-size: 22px;
+              align-items: center;
+            }
+          }
+
+          button:hover {
+            background-color: #cbba9c;
+            color: #fff;
+            border: 2px solid #cbba9c;
+          }
+        }
+      }
+
+      .content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 20px;
+        text-align: start;
+        height: 100%;
+
+        h1 {
+          font-size: 29px;
+          font-family: inherit;
+          color: inherit;
+          font-weight: bold;
+          text-align: start;
+          margin-bottom: 0;
+        }
+
+        .didiver {
+          height: 3px;
+          width: 30px;
+          background-color: rgba(0, 0, 0, 0.1);
+          margin: 10px 0;
+        }
+
+        .price-box {
+          font-size: 27px;
+          font-weight: bold;
+          margin-bottom: 25px;
+        }
+
+        .line-through {
+          text-decoration: line-through;
+        }
+
+        p {
+          margin-bottom: 0;
+          font-size: 17px;
+          font-weight: bold;
+        }
+
+        .text-warranty {
+          margin-bottom: 25px;
+        }
+
+        .product-meta {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font-size: 16px;
+            padding: 5px;
+            border-top: 1px dotted #ddd;
+          }
+        }
+
+        .button-next {
+          position: absolute;
+          top: 48%;
+          right: 6%;
+          opacity: 0;
+          transition: all 0.3s;
+
+          button {
+            border: 2px solid black;
+            outline: none;
+            background-color: #fff;
+            color: #111;
+            border-radius: 50%;
+            padding: 8px 8px;
+            cursor: pointer;
+
+            [nz-icon] {
+              display: flex;
+              font-size: 22px;
+              align-items: center;
+            }
+          }
+
+          button:hover {
+            background-color: #cbba9c;
+            color: #fff;
+            border: 2px solid #cbba9c;
+          }
+        }
+      }
+    }
+  }
+
+  .carousel:hover {
+    .carousel-content {
+      .image-container {
+        .button-prev {
+          opacity: 1;
+          left: 5%;
+          transform: translate(-50%);
+        }
+      }
+
+      .content {
+        .button-next {
+          opacity: 1;
+          right: 1%;
+          transform: translate(-50%);
+        }
+      }
+    }
+  }
+}

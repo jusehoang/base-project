@@ -3,6 +3,20 @@
   <h1>FEATURED <span>PRODUCTS</span></h1>
   <div class="gap-element"></div>
   <div class="list-product-feature">
-
+    <div class="card-container" *ngFor="let product of products">
+      <div class="image">
+        <img [src]="product.image" [alt]="product.name">
+      </div>
+      <div class="sale-container" *ngIf="product.isSale" [class.sale-padding]="product.percentSale || 0 >= 10">
+        <span>-{{ product.percentSale }}%</span>
+      </div>
+      <div class="price-box">
+        <h5 class="text-ellipsis">{{ product.name }}</h5>
+        <div class="price-warraper">
+          <span *ngIf="product.isSale">{{ product.priceSale | currencyPipe }}₫</span>&nbsp;
+          <span [class.lỉne-through]="product.isSale">{{ product.price | currencyPipe }}₫</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

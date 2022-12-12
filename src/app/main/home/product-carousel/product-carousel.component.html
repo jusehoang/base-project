@@ -1,0 +1,49 @@
+<div class="list-product-special">
+  <h2>A COMPANION FOR YA</h2>
+  <h1>SPECIAL <span>EDITION</span></h1>
+  <div class="carousel">
+    <nz-carousel>
+      <div nz-carousel-content *ngFor="let product of products">
+        <div class="carousel-content">
+          <div class="image-container">
+            <div class="image">
+              <img [src]="product.image" [alt]="product.name">
+            </div>
+            <div class="sale-container" *ngIf="product.isSale" [class.sale-padding]="product.percentSale || 0 > 10">
+              <span>-{{ product.percentSale }}%</span>
+            </div>
+            <div class="button-prev">
+              <button (click)="goPrevSlide()"><span nz-icon nzType="left" nzTheme="outline"></span></button>
+            </div>
+          </div>
+          <div class="content">
+            <h1>{{ product.name }}</h1>
+            <div class="didiver"></div>
+            <div class="price-box">
+              <span *ngIf="product.isSale">{{ product.priceSale | currencyPipe }}₫&nbsp;&nbsp;</span>
+              <span [class.line-through]="product.isSale">{{ product.price | currencyPipe }}₫</span>
+            </div>
+            <div class="text-warranty">
+              <p>› Sản phẩm nhập khẩu chính hãng.</p>
+              <p>› Vận chuyển miễn phí toàn quốc.</p>
+              <p>› Giao hàng trong ngày.</p>
+              <p>› Thanh toán sau khi nhận hàng.</p>
+              <p>› Bảo hành 5 năm tại Công ty.</p>
+              <p>› Bảo hành chính hãng toàn cầu.</p>
+            </div>
+            <div class="product-meta">
+              <span>Mã: {{ product.code }}</span>
+              <span>Danh mục: <ng-container *ngFor="let category of product.categorys">{{ category.name }},&nbsp;</ng-container></span>
+            </div>
+            <div class="button-group">
+              <button nz-button nzType="primary" nzSize="large">Xem chi tiết</button>
+            </div>
+            <div class="button-next">
+              <button (click)="goNextSlide()"><span nz-icon nzType="right" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nz-carousel>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+.footer-container {
+  background-image: url('../../../../assets/images/slider1.jpg');
+  background-size: 100% 100%;
+
+  .content {
+    width: calc(120rem - 733px);
+    margin: auto;
+    display: flex;
+    
+    .logo {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

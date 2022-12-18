@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { SimpleBaseComponent } from './../../../@core/base/simple.base.component';
+import { Component, OnInit, Injector } from '@angular/core';
 import { Product } from 'src/app/@core/models/product.model';
 
 @Component({
@@ -6,7 +7,7 @@ import { Product } from 'src/app/@core/models/product.model';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss']
 })
-export class ProductsComponent implements OnInit {
+export class ProductsComponent extends SimpleBaseComponent implements OnInit {
   products: Product[] = [
     {
       id: '1',
@@ -55,9 +56,12 @@ export class ProductsComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/29-480x480.jpg',
     },
   ];
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor(
+    injector: Injector,
+  ) {
+    super(injector);
   }
+
+  ngOnInit(): void {}
 
 }

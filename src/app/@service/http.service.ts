@@ -43,7 +43,7 @@ export class HttpService {
   get(path: string, options?: RequestOptions): Observable<any> {
     const requestOptions = this.createRequestOptions(options);
     const baseUrl = this.getBaseUrl(options);
-    return this.processRequest(this.httpClient.get(baseUrl + path, requestOptions as any), requestOptions)
+    return this.processRequest(this.httpClient.get(baseUrl + path, requestOptions as any), requestOptions);
   }
 
   post(path: string, options?: RequestOptions): Observable<any> {

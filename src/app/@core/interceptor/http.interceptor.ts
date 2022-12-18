@@ -53,7 +53,7 @@ export class GlobalHttpInterceptor implements HttpInterceptor {
         return event;
       }),
       catchError((error: HttpErrorResponse) => {
-        return throwError(error);
+        return throwError(() => error);
       }),
       finalize(() => {
         if (!requestOptions.hideLoading) {

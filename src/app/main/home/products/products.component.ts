@@ -1,6 +1,7 @@
 import { SimpleBaseComponent } from './../../../@core/base/simple.base.component';
 import { Component, OnInit, Injector } from '@angular/core';
 import { Product } from 'src/app/@core/models/product.model';
+import { TestApi } from 'src/app/@service/test.api';
 
 @Component({
   selector: 'app-products',
@@ -58,10 +59,15 @@ export class ProductsComponent extends SimpleBaseComponent implements OnInit {
   ];
   constructor(
     injector: Injector,
+    private readonly testApi: TestApi
   ) {
     super(injector);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.rxSubscribe(this.testApi.getAllProducts(), (data) => {
+      console.log(data);
+    })
+  }
 
 }

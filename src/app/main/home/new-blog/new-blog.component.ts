@@ -1,5 +1,6 @@
+import { NzCarouselComponent } from 'ng-zorro-antd/carousel';
 import { Blog } from './../../../@core/models/blog.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 export type arrayBlog = Blog[];
 
@@ -9,6 +10,7 @@ export type arrayBlog = Blog[];
   styleUrls: ['./new-blog.component.scss']
 })
 export class NewBlogComponent implements OnInit {
+  @ViewChild(NzCarouselComponent, { static: false }) carousel!: NzCarouselComponent;
   carouselSlides: arrayBlog[] = [
     [
       {
@@ -60,6 +62,14 @@ export class NewBlogComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  goPreviousSlide() {
+    this.carousel.pre();
+  }
+
+  goNextSlide() {
+    this.carousel.next();
   }
 
 }

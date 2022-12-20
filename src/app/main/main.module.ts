@@ -1,3 +1,4 @@
+import { DatePipe } from './../@core/pipes/date.pipe';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { MainRoutingModule } from "./main-routing.module";
@@ -21,7 +22,8 @@ import { NewBlogComponent } from './home/new-blog/new-blog.component';
     BannerComponent,
     ProductsComponent,
     ProductCarouselComponent,
-    NewBlogComponent
+    NewBlogComponent,
+    DatePipe
   ],
   imports: [
     MainRoutingModule,

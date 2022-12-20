@@ -2,7 +2,30 @@
   <h2>HAPPENINGS AROUND</h2>
   <h1>OUR <span>BLOG</span></h1>
   <div class="gap-element"></div>
-  <nz-carousel>
-    <div nz-carousel-content></div>
+  <nz-carousel [nzDots]="false">
+    <div nz-carousel-content *ngFor="let slides of carouselSlides">
+      <div class="content-container">
+        <div class="card" *ngFor="let blog of slides">
+          <div class="image">
+            <img [src]="blog.image" [alt]="blog.title">
+          </div>
+          <div class="card-content">
+            <h2>{{ blog.title }}</h2>
+            <span>{{ blog.createdDate | date }}</span>
+            <div class="didiver"></div>
+            <p>{{ blog.content }}</p>
+            <div class="button">
+              <button>Đọc thêm&nbsp; <span nz-icon nzType="double-right" nzTheme="outline"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </nz-carousel>
+  <div class="button-prev">
+    <button (click)="goPreviousSlide()"><span nz-icon nzType="left" nzTheme="outline"></span></button>
+  </div>
+  <div class="button-next">
+    <button (click)="goNextSlide()"><span nz-icon nzType="right" nzTheme="outline"></span></button>
+  </div>
 </div>

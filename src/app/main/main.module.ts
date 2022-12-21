@@ -12,6 +12,7 @@ import { SwiperModule } from "swiper/angular";
 import { ProductsComponent } from './home/products/products.component';
 import { ProductCarouselComponent } from './home/product-carousel/product-carousel.component';
 import { NewBlogComponent } from './home/new-blog/new-blog.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NewBlogComponent } from './home/new-blog/new-blog.component';
     ProductsComponent,
     ProductCarouselComponent,
     NewBlogComponent,
-    DatePipe
+    DatePipe,
+    SearchComponent
   ],
   imports: [
     MainRoutingModule,

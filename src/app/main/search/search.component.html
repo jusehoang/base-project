@@ -1,0 +1,20 @@
+<div class="breadcrum">
+  <div class="left">
+    <ul>
+      <li *ngFor="let breadcrumb of breadcumbs">
+        <a [routerLink]="breadcrumb.routerLink">{{ breadcrumb.content }}</a>
+      </li>
+    </ul>
+  </div>
+  <div class="right">
+    <span>Hiển thị kết quả tìm kiếm duy nhất</span>
+    <select>
+      <option value="">Thứ tự mặc định</option>
+      <option value="">Mới nhất</option>
+      <option value="">Theo giá: Từ thấp đến cao</option>
+      <option value="">Theo giá: Từ cao đến thấp</option>
+      <option value="">Theo Tên: Từ A-Z</option>
+      <option value="">Theo Tên: Từ Z-A</option>
+    </select>
+  </div>
+</div>

@@ -70,4 +70,8 @@ export class ProductsComponent extends SimpleBaseComponent implements OnInit {
     })
   }
 
+  addToCart(event: MouseEvent, product: Product) {
+    event.preventDefault();
+  }
+
 }

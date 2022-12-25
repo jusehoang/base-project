@@ -22,4 +22,5 @@ export interface Brand {
 export interface Category {
   id: string;
   name: string;
+  routerLink?: string;
 }

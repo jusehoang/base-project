@@ -24,6 +24,7 @@ export class CurrencyPipe implements PipeTransform {
         count = 0;
       }
     }
+    str = str + '₫';
 
     return str;
   }

@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { DatePipe } from './../@core/pipes/date.pipe';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
@@ -31,7 +32,8 @@ import { SearchComponent } from './search/search.component';
     MainRoutingModule,
     CommonModule,
     ThemeModule,
-    SwiperModule
+    SwiperModule,
+    FormsModule
   ]
 })
 export class MainModule {}

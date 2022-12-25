@@ -8,6 +8,8 @@ import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 import { NzFormModule } from 'ng-zorro-antd/form';
 import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzIconModule } from 'ng-zorro-antd/icon';
+import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
+import { NzSliderModule } from 'ng-zorro-antd/slider';
 
 
 const MODULES = [
@@ -17,7 +19,9 @@ const MODULES = [
   NzModalModule,
   NzIconModule,
   NzInputModule,
-  NzCarouselModule
+  NzCarouselModule,
+  NzBreadCrumbModule,
+  NzSliderModule
 ]
 
 @NgModule({

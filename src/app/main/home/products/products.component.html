@@ -14,8 +14,8 @@
       <div class="price-box">
         <h5 class="text-ellipsis">{{ product.name }}</h5>
         <div class="price-warraper">
-          <span *ngIf="product.isSale">{{ product.priceSale | currencyPipe }}₫</span>&nbsp;
-          <span [class.lỉne-through]="product.isSale">{{ product.price | currencyPipe }}₫</span>
+          <span *ngIf="product.isSale">{{ product.priceSale | currencyPipe }}</span>&nbsp;
+          <span [class.lỉne-through]="product.isSale">{{ product.price | currencyPipe }}</span>
         </div>
       </div>
     </div>

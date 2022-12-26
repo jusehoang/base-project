@@ -41,14 +41,41 @@
     <div class="product-relative">
       <h3>Quan tâm</h3>
       <ul>
-        <li *ngFor="let product of productRelatives">
+        <li *ngFor="let product of productRelatives; index as index">
           <div class="image">
             <img [src]="product.image" [alt]="product.name">
           </div>
-          <div class="text-container"></div>
+          <div class="text-container">
+            <h5>{{ product.name }}</h5>
+            <div class="price-warraper">
+              <span *ngIf="product.isSale">{{ product.priceSale | currencyPipe }}&nbsp;</span>
+              <span [class.line-through]="product.isSale">{{ product.price | currencyPipe }}</span>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
   </div>
-  <div class="right"></div>
+  <div class="right">
+    <div class="product-container">
+      <div class="list-product-feature">
+        <div class="card-container" *ngFor="let product of products">
+          <div class="image">
+            <img [src]="product.image" [alt]="product.name">
+          </div>
+          <div class="sale-container" *ngIf="product.isSale" [class.sale-padding]="(product.percentSale || 0) >= 10">
+            <span>-{{ product.percentSale }}%</span>
+          </div>
+          <button (click)="addToCart($event, product)"><span class="cart-icon"><strong>+</strong></span></button>
+          <div class="price-box">
+            <h5 class="text-ellipsis">{{ product.name }}</h5>
+            <div class="price-warraper">
+              <span *ngIf="product.isSale">{{ product.priceSale | currencyPipe }}</span>&nbsp;
+              <span [class.lỉne-through]="product.isSale">{{ product.price | currencyPipe }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

@@ -163,6 +163,10 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addToCart(event: MouseEvent, product: Product) {
+    event.preventDefault();
+  }
+
 }
 
 export interface Breadcrumb {

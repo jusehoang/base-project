@@ -22,7 +22,7 @@
   <div class="left">
     <h3>Danh mục sản phẩm</h3>
     <ul>
-      <li *ngFor="let category of categorys">
+      <li *ngFor="let category of categorys; index as index" [class.not-border]="index === (categorys.length - 1)">
         <a [routerLink]="category.routerLink" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">{{ category.name }}</a>
       </li>
     </ul>
@@ -41,7 +41,7 @@
     <div class="product-relative">
       <h3>Quan tâm</h3>
       <ul>
-        <li *ngFor="let product of productRelatives; index as index">
+        <li *ngFor="let product of productRelatives; index as index" [class.not-border]="index === (productRelatives.length - 1)">
           <div class="image">
             <img [src]="product.image" [alt]="product.name">
           </div>
@@ -66,7 +66,9 @@
           <div class="sale-container" *ngIf="product.isSale" [class.sale-padding]="(product.percentSale || 0) >= 10">
             <span>-{{ product.percentSale }}%</span>
           </div>
-          <button (click)="addToCart($event, product)"><span class="cart-icon"><strong>+</strong></span></button>
+          <button (click)="addToCart($event, product)" nz-tooltip nzTooltipPlacement="top" nzTooltipTitle="Thêm vào giỏ">
+            <span class="cart-icon"><strong>+</strong></span>
+          </button>
           <div class="price-box">
             <h5 class="text-ellipsis">{{ product.name }}</h5>
             <div class="price-warraper">

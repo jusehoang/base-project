@@ -1,4 +1,4 @@
-import { each } from "lodash";
+import { each, reject } from "lodash";
 import { Observable, Subscription } from "rxjs";
 
 export interface Disposable {
@@ -7,7 +7,7 @@ export interface Disposable {
 type Contructor = new (...args: any[]) => {}
 export const subscribeable = <O extends Contructor>(target: O) => {
   return class SubcribeableClass extends target implements Disposable {
-    private readonly subscriptions: Subscription[] = [];
+    private subscriptions: Subscription[] = [];
 
     protected rxSubscribe<T>(observable: Observable<T>, next: (value: T) => void, error?: (err: unknown) => void, complete?: () => void): Subscription {
       const subscription = observable.subscribe({
@@ -22,6 +22,12 @@ export const subscribeable = <O extends Contructor>(target: O) => {
     protected rxUnsubscribeAll() {
       each(this.subscriptions, (subscription: Subscription) => subscription.unsubscribe());
       this.subscriptions.length = 0;
+      this.subscriptions = [];
+    }
+
+    rxUnSubscribe(subscription: Subscription) {
+      this.subscriptions = reject(this.subscriptions, (s: Subscription) => s === subscription);
+      subscription.unsubscribe();
     }
 
     dispose() {

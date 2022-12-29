@@ -1,5 +1,5 @@
 import { Component, Injectable, Injector, OnDestroy } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { each, reject } from "lodash";
 import { Observable, Subscription } from "rxjs";
 import { MessageService } from "src/app/@service/message.service";
@@ -14,9 +14,11 @@ export class SimpleBaseComponent implements OnDestroy {
   private subscriptions: Subscription[] = [];
   protected activatedRoute: ActivatedRoute;
   protected messageService: MessageService;
+  protected router: Router;
   constructor(protected injector: Injector) {
     this.activatedRoute = this.injector.get(ActivatedRoute);
     this.messageService = this.injector.get(MessageService);
+    this.router = this.injector.get(Router);
   }
 
   rxSubscribe<T>(observable: Observable<T>, next: (value: T) => void, error?: (err: any) => void, complete?: () => void): Subscription {

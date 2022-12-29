@@ -14,6 +14,7 @@ import { ProductsComponent } from './home/products/products.component';
 import { ProductCarouselComponent } from './home/product-carousel/product-carousel.component';
 import { NewBlogComponent } from './home/new-blog/new-blog.component';
 import { SearchComponent } from './search/search.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { SearchComponent } from './search/search.component';
     ProductCarouselComponent,
     NewBlogComponent,
     DatePipe,
-    SearchComponent
+    SearchComponent,
+    DetailComponent
   ],
   imports: [
     MainRoutingModule,

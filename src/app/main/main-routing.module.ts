@@ -1,3 +1,4 @@
+import { DetailComponent } from './detail/detail.component';
 import { SearchComponent } from './search/search.component';
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'products/:category',
         component: SearchComponent
+      },
+      {
+        path: 'detail',
+        component: DetailComponent
       }
     ]
   }

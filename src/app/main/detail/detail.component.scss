@@ -1,0 +1,68 @@
+.product-detail-container {
+  display: flex;
+  width: calc(120rem - 733px);
+  margin: auto;
+
+  .image-container {
+    flex: 1;
+    padding: 10px 10px 10px 0;
+  }
+
+  .detail-container {
+    flex: 1;
+
+    .price {
+      span {
+        font-weight: bold;
+        font-size: 26px;
+      }
+    }
+
+    .text-warranty {
+      margin-bottom: 25px;
+
+      p {
+        margin-bottom: 0;
+        font-size: 16px;
+      }
+    }
+
+    .add-to-cart {
+      display: flex;
+
+      .quantity {
+        margin-right: 30px;
+
+        button {
+          outline: none;
+          border: #ddd 1px solid;
+          cursor: pointer;
+          background-color: #f9f9f9;
+          color: #666;
+          padding: 5px 8px;
+        }
+
+        .decrease {
+          padding: 5px 10px;
+        }
+
+        button:hover {
+          color: #000;
+          background-color: #c1c1c1;
+        }
+
+        input {
+          width: 40px;
+          outline: none;
+          border: 1px solid #ddd;
+          text-align: center;
+          padding: 5px;
+        }
+      }
+
+      .button-add-to-cart {
+
+      }
+    }
+  }
+}

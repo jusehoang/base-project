@@ -15,6 +15,7 @@ import { ProductCarouselComponent } from './home/product-carousel/product-carous
 import { NewBlogComponent } from './home/new-blog/new-blog.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
+import { NgxImageZoomModule } from 'ngx-image-zoom';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { DetailComponent } from './detail/detail.component';
     CommonModule,
     ThemeModule,
     SwiperModule,
-    FormsModule
+    FormsModule,
+    NgxImageZoomModule
   ]
 })
 export class MainModule {}

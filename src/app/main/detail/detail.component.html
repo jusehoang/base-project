@@ -1,1 +1,32 @@
-<p>detail works!</p>
+<div class="product-detail-container">
+  <div class="image-container">
+    <lib-ngx-image-zoom [thumbImage]="'https://wittlock.github.io/ngx-image-zoom/assets/thumb.jpg' || ''" [fullImage]="'https://wittlock.github.io/ngx-image-zoom/assets/fullres.jpg' || ''"
+    [zoomMode]="'hover'"></lib-ngx-image-zoom>
+  </div>
+  <div class="detail-container">
+    <h1>{{ product.name }}</h1>
+    <div class="didiver"></div>
+    <div class="price">
+      <span>{{ product.price | currencyPipe }}</span>&nbsp;
+      <span>{{ product.priceSale | currencyPipe }}</span>
+    </div>
+    <div class="text-warranty">
+      <p>› Sản phẩm nhập khẩu chính hãng.</p>
+      <p>› Vận chuyển miễn phí toàn quốc.</p>
+      <p>› Giao hàng trong ngày.</p>
+      <p>› Thanh toán sau khi nhận hàng.</p>
+      <p>› Bảo hành 5 năm tại Công ty.</p>
+      <p>› Bảo hành chính hãng toàn cầu.</p>
+    </div>
+    <div class="add-to-cart">
+      <div class="quantity">
+        <button class="decrease">-</button>
+        <input type="text">
+        <button>+</button>
+      </div>
+      <div class="button-add-to-cart">
+        <button>Thêm vào giỏ hàng</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -20,13 +20,17 @@
     </div>
     <div class="add-to-cart">
       <div class="quantity">
-        <button class="decrease">-</button>
-        <input type="text">
-        <button>+</button>
+        <button class="decrease" (click)="quantity = quantity - 1">-</button>
+        <input type="text" [(ngModel)]="quantity" min="0">
+        <button (click)="quantity = quantity + 1">+</button>
       </div>
       <div class="button-add-to-cart">
         <button>Thêm vào giỏ hàng</button>
       </div>
+    </div>
+    <div class="product-meta">
+      <span>Mã: {{ product.code }}</span>
+      <span>Danh mục: <ng-container *ngFor="let category of product.categorys">{{ category.name }},&nbsp;</ng-container></span>
     </div>
   </div>
 </div>

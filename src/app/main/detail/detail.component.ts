@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Product } from 'src/app/@core/models/product.model';
 
 @Component({
@@ -14,8 +15,24 @@ export class DetailComponent implements OnInit {
     image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-480x480.jpg',
     isSale: true,
     priceSale: 9540000,
-    percentSale: 40
+    percentSale: 40,
+    code: '83399-1',
+      categorys: [
+        {
+          id: '1',
+          name: 'Đồng hồ cặp đôi'
+        },
+        {
+          id: '2',
+          name: 'Đồng hồ nam'
+        },
+        {
+          id: '3',
+          name: 'Sản phẩm hot'
+        },
+      ]
   }
+  quantity = 1;
   constructor() { }
 
   ngOnInit(): void {

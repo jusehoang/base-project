@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from './../@core/pipes/date.pipe';
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
@@ -37,7 +37,8 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     ThemeModule,
     SwiperModule,
     FormsModule,
-    NgxImageZoomModule
+    NgxImageZoomModule,
+    ReactiveFormsModule
   ]
 })
 export class MainModule {}

@@ -31,6 +31,13 @@
     <div class="product-meta">
       <span>Mã: {{ product.code }}</span>
       <span>Danh mục: <ng-container *ngFor="let category of product.categorys">{{ category.name }},&nbsp;</ng-container></span>
+      <span>Từ khóa: <ng-container *ngFor="let category of product.categorys">{{ category.name }},&nbsp;</ng-container></span>
     </div>
   </div>
+</div>
+<div class="description-container">
+  <nz-tabset nzType="card">
+    <nz-tab nzTitle="Mô tả"></nz-tab>
+    <nz-tab [nzTitle]="'Đánh giá(' + totalEvaluate + ')'"></nz-tab>
+  </nz-tabset>
 </div>

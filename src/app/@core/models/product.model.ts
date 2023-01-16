@@ -12,6 +12,7 @@ export interface Product {
   code?: string;
   brand?: Brand;
   categorys?: Category[];
+  keywords?: string[];
 }
 
 export interface Brand {

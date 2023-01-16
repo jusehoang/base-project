@@ -93,3 +93,8 @@
     }
   }
 }
+
+::ng-deep .description-container {
+  width: calc(120rem - 733px);
+  margin: auto;
+}

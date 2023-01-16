@@ -33,6 +33,7 @@ export class DetailComponent implements OnInit {
       ]
   }
   quantity = 1;
+  totalEvaluate = 0;
   constructor() { }
 
   ngOnInit(): void {

@@ -1,0 +1,14 @@
+<div class="evaluate-container">
+  <h3>Đánh giá</h3>
+  <div *ngIf="evaluates.length; else notEvaluate">
+
+  </div>
+  <div class="form-evaluate">
+    <ng-container *ngIf="!evaluates.length">
+      <h3>Hãy là người đầu tiên nhận xét “{{ product.name }}”</h3>
+    </ng-container>
+  </div>
+</div>
+<ng-template #notEvaluate>
+  <p>Chưa có đánh giá nào</p>
+</ng-template>

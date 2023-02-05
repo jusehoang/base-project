@@ -97,4 +97,29 @@
 ::ng-deep .description-container {
   width: calc(120rem - 733px);
   margin: auto;
+
+  .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
+    background-color: rgba(0,0,0, 0.04);
+    color: rgba(17,17,17,0.85);
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-bottom: none;
+  }
+
+  .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab-active {
+    background-color: #fff;
+  }
+
+  .ant-tabs {
+    font-size: 18px;
+  }
+
+  .ant-tabs-nav {
+    margin-bottom: 0;
+  }
+
+  .ant-tabs-content-holder {
+    border: 1px solid #ddd;
+    border-top: none;
+  }
 }

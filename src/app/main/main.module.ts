@@ -16,6 +16,8 @@ import { NewBlogComponent } from './home/new-blog/new-blog.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
+import { DescriptionComponent } from './detail/description/description.component';
+import { EvaluatesComponent } from './detail/evaluates/evaluates.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
     NewBlogComponent,
     DatePipe,
     SearchComponent,
-    DetailComponent
+    DetailComponent,
+    DescriptionComponent,
+    EvaluatesComponent
   ],
   imports: [
     MainRoutingModule,

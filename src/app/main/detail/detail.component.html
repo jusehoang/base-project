@@ -37,7 +37,11 @@
 </div>
 <div class="description-container">
   <nz-tabset nzType="card">
-    <nz-tab nzTitle="Mô tả"></nz-tab>
-    <nz-tab [nzTitle]="'Đánh giá(' + totalEvaluate + ')'"></nz-tab>
+    <nz-tab nzTitle="Mô tả">
+      <app-description [innerHTMLDescription]="product.description || ''"></app-description>
+    </nz-tab>
+    <nz-tab [nzTitle]="'Đánh giá(' + totalEvaluate + ')'">
+      <app-evaluates [product]="product"></app-evaluates>
+    </nz-tab>
   </nz-tabset>
 </div>

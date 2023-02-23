@@ -74,7 +74,7 @@ export class SearchComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-25_large-480x480.jpg',
       isSale: true,
       priceSale: 5800000,
-      percentSale: 8
+      discountPercentage: 8
     },
     {
       id: '3',
@@ -89,7 +89,7 @@ export class SearchComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/12-480x480.jpg',
       isSale: true,
       priceSale: 819000,
-      percentSale: 88
+      discountPercentage: 88
     },
     {
       id: '5',
@@ -98,7 +98,7 @@ export class SearchComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-480x480.jpg',
       isSale: true,
       priceSale: 9540000,
-      percentSale: 40
+      discountPercentage: 40
     },
     {
       id: '6',
@@ -122,7 +122,7 @@ export class SearchComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-25_large-480x480.jpg',
       isSale: true,
       priceSale: 5800000,
-      percentSale: 8
+      discountPercentage: 8
     },
     {
       id: '3',
@@ -137,7 +137,7 @@ export class SearchComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/12-480x480.jpg',
       isSale: true,
       priceSale: 819000,
-      percentSale: 88
+      discountPercentage: 88
     },
     {
       id: '5',
@@ -146,7 +146,7 @@ export class SearchComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-480x480.jpg',
       isSale: true,
       priceSale: 9540000,
-      percentSale: 40
+      discountPercentage: 40
     },
     {
       id: '6',

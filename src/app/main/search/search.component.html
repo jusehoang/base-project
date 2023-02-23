@@ -63,8 +63,8 @@
           <div class="image">
             <img [src]="product.image" [alt]="product.name">
           </div>
-          <div class="sale-container" *ngIf="product.isSale" [class.sale-padding]="(product.percentSale || 0) >= 10">
-            <span>-{{ product.percentSale }}%</span>
+          <div class="sale-container" *ngIf="product.isSale" [class.sale-padding]="(product.discountPercentage || 0) >= 10">
+            <span>-{{ product.discountPercentage }}%</span>
           </div>
           <button (click)="addToCart($event, product)" nz-tooltip nzTooltipPlacement="top" nzTooltipTitle="Thêm vào giỏ">
             <span class="cart-icon"><strong>+</strong></span>

@@ -6,13 +6,14 @@ export interface Product {
   image?: string;
   isSale?: boolean;
   priceSale?: number;
-  percentSale?: number;
+  discountPercentage?: number;
   sellNumber?: number;
   createdDate?: Date;
   code?: string;
   brand?: Brand;
   categorys?: Category[];
   keywords?: string[];
+  stock?: number;
 }
 
 export interface Brand {

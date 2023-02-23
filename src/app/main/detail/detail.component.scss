@@ -97,6 +97,7 @@
 ::ng-deep .description-container {
   width: calc(120rem - 733px);
   margin: auto;
+  margin-bottom: 30px;
 
   .ant-tabs-card > .ant-tabs-nav .ant-tabs-tab {
     background-color: rgba(0,0,0, 0.04);
@@ -121,5 +122,17 @@
   .ant-tabs-content-holder {
     border: 1px solid #ddd;
     border-top: none;
+  }
+}
+
+::ng-deep .product-related {
+  width: calc(120rem - 733px);
+  margin: auto;
+  border-top: 1px solid #ddd;
+
+  h3 {
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 }

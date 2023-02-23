@@ -1,14 +1,12 @@
-import { SimpleBaseComponent } from './../../../@core/base/simple.base.component';
-import { Component, OnInit, Injector } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/@core/models/product.model';
-import { TestApi } from 'src/app/@service/test.api';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  selector: 'app-products-related',
+  templateUrl: './products-related.component.html',
+  styleUrls: ['./products-related.component.scss']
 })
-export class ProductsComponent extends SimpleBaseComponent implements OnInit {
+export class ProductsRelatedComponent implements OnInit {
   products: Product[] = [
     {
       id: '1',
@@ -50,24 +48,16 @@ export class ProductsComponent extends SimpleBaseComponent implements OnInit {
       priceSale: 9540000,
       discountPercentage: 40
     },
-    {
-      id: '6',
-      name: 'CARTIER W6920071 BALLON BLEU DE CERTIER WATCH 33MM',
-      price: 156980000,
-      image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/29-480x480.jpg',
-    },
+    // {
+    //   id: '6',
+    //   name: 'CARTIER W6920071 BALLON BLEU DE CERTIER WATCH 33MM',
+    //   price: 156980000,
+    //   image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/29-480x480.jpg',
+    // },
   ];
-  constructor(
-    injector: Injector,
-    private readonly testApi: TestApi
-  ) {
-    super(injector);
-  }
+  constructor() { }
 
-  ngOnInit(): void {
-    this.rxSubscribe(this.testApi.getAllProducts(), (data) => {
-      console.log(data);
-    })
+  ngOnInit() {
   }
 
   addToCart(event: MouseEvent, product: Product) {

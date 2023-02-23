@@ -12,6 +12,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
 import { NzTabsModule } from 'ng-zorro-antd/tabs';
+import { NzRateModule } from 'ng-zorro-antd/rate';
 
 
 const MODULES = [
@@ -25,7 +26,8 @@ const MODULES = [
   NzBreadCrumbModule,
   NzSliderModule,
   NzToolTipModule,
-  NzTabsModule
+  NzTabsModule,
+  NzRateModule
 ]
 
 @NgModule({

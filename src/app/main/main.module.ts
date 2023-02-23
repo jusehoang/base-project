@@ -18,6 +18,7 @@ import { DetailComponent } from './detail/detail.component';
 import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { DescriptionComponent } from './detail/description/description.component';
 import { EvaluatesComponent } from './detail/evaluates/evaluates.component';
+import { ProductsRelatedComponent } from './detail/products-related/products-related.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { EvaluatesComponent } from './detail/evaluates/evaluates.component';
     SearchComponent,
     DetailComponent,
     DescriptionComponent,
-    EvaluatesComponent
+    EvaluatesComponent,
+    ProductsRelatedComponent
   ],
   imports: [
     MainRoutingModule,
@@ -42,6 +44,7 @@ import { EvaluatesComponent } from './detail/evaluates/evaluates.component';
     SwiperModule,
     FormsModule,
     NgxImageZoomModule,
+    ReactiveFormsModule,
     ReactiveFormsModule
   ]
 })

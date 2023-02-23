@@ -15,7 +15,7 @@ export class DetailComponent implements OnInit {
     image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-480x480.jpg',
     isSale: true,
     priceSale: 9540000,
-    percentSale: 40,
+    discountPercentage: 40,
     code: '83399-1',
     categorys: [
       {

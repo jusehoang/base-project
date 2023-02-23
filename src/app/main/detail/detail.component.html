@@ -36,7 +36,7 @@
   </div>
 </div>
 <div class="description-container">
-  <nz-tabset nzType="card">
+  <nz-tabset nzType="card" [nzAnimated]="true">
     <nz-tab nzTitle="Mô tả">
       <app-description [innerHTMLDescription]="product.description || ''"></app-description>
     </nz-tab>
@@ -44,4 +44,8 @@
       <app-evaluates [product]="product"></app-evaluates>
     </nz-tab>
   </nz-tabset>
+</div>
+<div class="product-related">
+  <h3>Sản phẩm tương tự</h3>
+  <app-products-related></app-products-related>
 </div>

@@ -39,7 +39,7 @@ export class ProductCarouselComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/product-25_large-480x480.jpg',
       isSale: true,
       priceSale: 5800000,
-      percentSale: 8,
+      discountPercentage: 8,
       code: '83399-1',
       categorys: [
         {
@@ -84,7 +84,7 @@ export class ProductCarouselComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/12-480x480.jpg',
       isSale: true,
       priceSale: 819000,
-      percentSale: 88,
+      discountPercentage: 88,
       code: '83399-1',
       categorys: [
         {
@@ -108,7 +108,7 @@ export class ProductCarouselComponent implements OnInit {
       image: 'https://mauweb.monamedia.net/rolex/wp-content/uploads/2018/11/15-480x480.jpg',
       isSale: true,
       priceSale: 9540000,
-      percentSale: 40,
+      discountPercentage: 40,
       code: '83399-1',
       categorys: [
         {

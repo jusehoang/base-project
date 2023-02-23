@@ -1,6 +1,6 @@
 @import '../../../../styles.scss';
 
-.evaluate-container {
+::ng-deep .evaluate-container {
   padding: 35px;
 
   h3 {
@@ -9,5 +9,76 @@
 
   p {
     font-size: $font-size-base;
+  }
+
+  h4 {
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+
+  .anticon {
+    font-size: 22px;
+  }
+
+  .ant-rate {
+    margin-bottom: 15px;
+  }
+
+  .content-input {
+    textarea {
+      outline: none;
+      border: 1px solid #ddd;
+      padding: 10px;
+    }
+  }
+
+  .content-label {
+    label {
+      font-weight: bold;
+    }
+  }
+
+  .form-evaluate {
+    padding: 20px;
+    border: 2px solid #cbba9c;
+
+    .button-submit {
+      background-color: #cbba9c;
+      color: #fff;
+      outline: none;
+      border: none;
+      padding: 5px 10px;
+      // font-size: 19px;
+      // text-transform: uppercase;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .button-submit:hover {
+      background-color: #a2957d;
+    }
+  }
+
+  .information {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+
+    .left, .right {
+      width: 49%;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        outline: none;
+        border: 1px solid #ddd;
+        padding: 5px 10px;
+      }
+
+      label {
+        font-weight: bold;
+      }
+    }
   }
 }

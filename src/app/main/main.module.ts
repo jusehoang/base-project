@@ -45,7 +45,6 @@ import { ProductsRelatedComponent } from './detail/products-related/products-rel
     FormsModule,
     NgxImageZoomModule,
     ReactiveFormsModule,
-    ReactiveFormsModule
   ]
 })
 export class MainModule {}

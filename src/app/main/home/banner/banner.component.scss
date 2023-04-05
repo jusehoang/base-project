@@ -1,64 +1,3 @@
-// @import 'swiper/scss';
-// @import 'swiper/scss/navigation';
-// @import 'swiper/scss/autoplay';
-
-// .swiper {
-//   width: 100%;
-//   height: 100%;
-// }
-
-// // ::ng-deep .banner-container {
-// //   .slide-container {
-// //     .image.container {
-// //       overflow: hidden;
-// //       img {
-// //         width: 100%;
-// //         height: 100%;
-// //       }
-// //     }
-// //   }
-// // }
-
-// .swiper-slide-active {
-//   transform: scale(1.2);
-//   transition: transform 20s;
-// }
-
-// .swiper-button-prev {
-//   left: 10px;
-//   background-color: #cbba9c;
-//   border-radius: 50px;
-//   padding: 22px;
-//   opacity: 0 !important;
-//   transition: opacity 0.3s;
-// }
-
-// .swiper-button-prev:hover {
-//   opacity: 1 !important;
-// }
-
-// .swiper-button-next {
-//   background-color: #cbba9c;
-//   border-radius: 50px;
-//   padding: 22px;
-//   opacity: 0 !important;
-//   transition: opacity 0.3s;
-// }
-
-// .swiper-button-next:hover {
-//   opacity: 1 !important;
-// }
-
-// .swiper-button-prev::after {
-//   color: #fff !important;
-//   font-size: 20px !important;
-// }
-
-// .swiper-button-next::after {
-//   color: #fff !important;
-//   font-size: 20px !important;
-// }
-
 .banner-container {
   height: 800px;
   position: relative;
@@ -194,7 +133,6 @@
       font-weight: bold;
       font-size: 16px;
       margin-top: 20px;
-      // background-color: rgba(104, 95, 82, 0.77);
       background-color: transparent;
       border: #cbba9c 2px solid;
       transition: all 0.4s ease-in-out;
@@ -258,6 +196,24 @@
       }
     }
   }
+
+  .content-container-slide-three {
+    // width: calc(120rem - 733px);
+    // margin: auto;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+
+    .image-left, .image-center, .image-right {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 }
 
 .banner-container-two {
@@ -272,6 +228,7 @@
 
     .image-container {
       overflow: hidden;
+
       img {
         height: 576px;
         width: 100%;

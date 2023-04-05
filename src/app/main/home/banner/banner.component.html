@@ -1,19 +1,4 @@
 <div class="banner-container">
-  <!-- <swiper [navigation]="true" [autoplay]="true" [virtual]="true">
-    <ng-template swiperSlide>
-      <div class="slide-container">
-        <div class="image-container">
-          <img src="../../../../assets/images/slider1.jpg" alt="">
-        </div>
-        <div class="content-container"></div>
-      </div>
-    </ng-template>
-    <ng-template swiperSlide>
-      <div class="image-container">
-        <img src="../../../../assets/images/slider2.jpg" alt="">
-      </div>
-    </ng-template>
-  </swiper> -->
   <nz-carousel [nzDots]="false" [nzAutoPlay]="true" [nzAutoPlaySpeed]="20000">
     <div nz-carousel-content>
       <div class="image-container">
@@ -21,12 +6,12 @@
       </div>
       <div class="content-container">
         <div class="content">
-          <h6>BỘ SƯU TẬP ĐỒNG HỒ</h6>
-          <h3><strong>Trường tồn với thời gian</strong></h3>
-          <p>Đồng hồ được chế tác từ các nguyên liệu tốt nhất và lắp ráp tỉ mỉ đến từng chi tiết. Mỗi chi tiết được thiết kế, phát triển, và sản xuất với tiêu chuẩn chính xác nhất.</p>
+          <h6>{{ 'home.collectionWatch' | translate }}</h6>
+          <h3><strong>{{ 'home.surviveWithTime' | translate }}</strong></h3>
+          <p>{{ 'home.descriptionBannerOne' | translate }}</p>
         </div>
         <div class="button">
-          <button class="button-banner">MUA NGAY</button>
+          <button class="button-banner">{{ 'common.button.buyNow' | translate }}</button>
         </div>
       </div>
     </div>
@@ -36,9 +21,9 @@
       </div>
       <div class="content-container-slide-two">
         <div class="content">
-          <h6>DÀNH RIÊNG CHO DOANH NHÂN</h6>
-          <h3><strong>Đẳng cấp là mãi mãi</strong></h3>
-          <p>Bộ sưu tập với các mẫu đồng hồ Rolex cổ điển gồm các kiểu dáng kết hợp những bí quyết của Rolex và những tiêu chuẩn cao nhất của sự hoàn hảo.</p>
+          <h6>{{ 'home.onlyForBusinesses' | translate }}</h6>
+          <h3><strong>{{ 'home.classIsForever' | translate }}</strong></h3>
+          <p>{{ 'home.descriptionBannerTwo' | translate }}</p>
         </div>
       </div>
     </div>
@@ -46,11 +31,20 @@
       <div class="image-container">
         <img src="../../../../assets/images/slider3-3.jpg" alt="">
       </div>
-      <div class="content-container-slide-two">
+      <div class="content-container-slide-three">
         <div class="content">
-          <h6>DÀNH RIÊNG CHO DOANH NHÂN</h6>
+          <h6>{{ 'home.shapingTheStyle' | translate }}</h6>
           <h3><strong>Đẳng cấp là mãi mãi</strong></h3>
-          <p>Bộ sưu tập với các mẫu đồng hồ Rolex cổ điển gồm các kiểu dáng kết hợp những bí quyết của Rolex và những tiêu chuẩn cao nhất của sự hoàn hảo.</p>
+          <p>{{ 'home.descriptionBannerThree' | translate }}</p>
+        </div>
+        <div class="image-left">
+          <img src="../../../../assets/images/slider3-1.jpg" alt="">
+        </div>
+        <div class="image-center">
+          <img src="../../../../assets/images/slider3-3.jpg" alt="">
+        </div>
+        <div class="image-right">
+          <img src="../../../../assets/images/slider3-2.jpg" alt="">
         </div>
       </div>
     </div>

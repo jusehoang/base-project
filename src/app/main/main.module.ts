@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DatePipe } from './../@core/pipes/date.pipe';
 import { CommonModule } from "@angular/common";
@@ -19,6 +20,7 @@ import { NgxImageZoomModule } from 'ngx-image-zoom';
 import { DescriptionComponent } from './detail/description/description.component';
 import { EvaluatesComponent } from './detail/evaluates/evaluates.component';
 import { ProductsRelatedComponent } from './detail/products-related/products-related.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { ProductsRelatedComponent } from './detail/products-related/products-rel
     DetailComponent,
     DescriptionComponent,
     EvaluatesComponent,
-    ProductsRelatedComponent
+    ProductsRelatedComponent,
+    CartComponent
   ],
   imports: [
     MainRoutingModule,
@@ -45,6 +48,7 @@ import { ProductsRelatedComponent } from './detail/products-related/products-rel
     FormsModule,
     NgxImageZoomModule,
     ReactiveFormsModule,
+    TranslateModule,
   ]
 })
 export class MainModule {}

@@ -27,7 +27,7 @@ const routes: Routes = [
         path: 'cart',
         component: CartComponent,
         data: {
-          require: []
+          require: ['hello']
         }
       }
     ]

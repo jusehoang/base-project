@@ -16,7 +16,7 @@ export class GlobalHttpInterceptor implements HttpInterceptor {
     req.params instanceof InterceptorHttpParams ? (requestOptions = req.params.options) : (requestOptions = {});
 
     if (!requestOptions.hideLoading) {
-      this.loadingService.showLoading();
+      this.loadingService.increase();
     }
 
     let headers = req.headers;
@@ -57,7 +57,7 @@ export class GlobalHttpInterceptor implements HttpInterceptor {
       }),
       finalize(() => {
         if (!requestOptions.hideLoading) {
-          this.loadingService.hideLoading();
+          this.loadingService.decrease();
         }
       })
     )

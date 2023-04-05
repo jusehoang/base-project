@@ -1,8 +1,10 @@
+import { TranslateService } from '@ngx-translate/core';
 import { Component, Injectable, Injector, OnDestroy } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { each, reject } from "lodash";
 import { Observable, Subscription } from "rxjs";
 import { MessageService } from "src/app/@service/message.service";
+import { LanguageService } from 'src/app/@service/translate.service';
 
 @Injectable({
   providedIn: "root"
@@ -15,10 +17,23 @@ export class SimpleBaseComponent implements OnDestroy {
   protected activatedRoute: ActivatedRoute;
   protected messageService: MessageService;
   protected router: Router;
+  protected translateService: TranslateService;
+  protected languageService: LanguageService;
+  protected currentLanguage = 'vi';
   constructor(protected injector: Injector) {
     this.activatedRoute = this.injector.get(ActivatedRoute);
     this.messageService = this.injector.get(MessageService);
+    this.translateService = this.injector.get(TranslateService);
+    this.languageService = this.injector.get(LanguageService);
     this.router = this.injector.get(Router);
+    this.init();
+  }
+
+  init() {
+    this.rxSubscribe(this.languageService.currentLanguage, (lang) => {
+      this.currentLanguage = lang;
+    });
+    this.languageService.refresh();
   }
 
   rxSubscribe<T>(observable: Observable<T>, next: (value: T) => void, error?: (err: any) => void, complete?: () => void): Subscription {

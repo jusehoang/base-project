@@ -1,0 +1,24 @@
+{
+  "common": {
+    "button": {
+      "buyNow": "MUA NGAY"
+    }
+  },
+  "home": {
+    "collectionWatch": "BỘ SƯU TẬP ĐỒNG HỒ",
+    "surviveWithTime": "Trường tồn với thời gian",
+    "descriptionBannerOne": "Đồng hồ được chế tác từ các nguyên liệu tốt nhất và lắp ráp tỉ mỉ đến từng chi tiết. Mỗi chi tiết được thiết kế, phát triển, và sản xuất với tiêu chuẩn chính xác nhất.",
+    "onlyForBusinesses": "DÀNH RIÊNG CHO DOANH NHÂN",
+    "classIsForever": "Đẳng cấp là mãi mãi",
+    "descriptionBannerTwo": "Bộ sưu tập với các mẫu đồng hồ Rolex cổ điển gồm các kiểu dáng kết hợp những bí quyết của Rolex và những tiêu chuẩn cao nhất của sự hoàn hảo.",
+    "shapingTheStyle": "ĐỊNH HINHG PHONG CÁCH",
+    "descriptionBannerThree": "Khám phá bộ sưu tập Rolex bằng cách chọn mẫu, chất liệu, vành đồng hồ, mặt số và dây đeo tay của bạn."
+  },
+  "cart": {
+    "product": "SẢN PHẨM",
+    "price": "GIÁ",
+    "quantity": "SỐ LƯỢNG",
+    "total": "TỔNG",
+    "action": "HÀNH ĐỘNG"
+  }
+}

@@ -65,9 +65,10 @@ export class ProductsComponent extends SimpleBaseComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.rxSubscribe(this.testApi.getAllProducts(), (data) => {
-      console.log(data);
-    })
+    // this.rxSubscribe(this.testApi.getAllProducts(), (data) => {
+    //   console.log(data);
+    // })
+    // this.loadingService.increase();
   }
 
   addToCart(event: MouseEvent, product: Product) {

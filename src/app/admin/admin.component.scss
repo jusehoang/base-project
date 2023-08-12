@@ -1,0 +1,23 @@
+::ng-deep .layout-container {
+  .content-container {
+    height: 90vh;
+    background-color: #f8f9fb;
+  }
+
+  nz-header {
+    background-color: #f8f9fb;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  nz-footer {
+    background-color: #f8f9fb;
+    height: 30px;
+    padding: 0;
+  }
+
+  nz-sider {
+    box-shadow: 0 -2px 5px rgba(52,58,64,.06);
+    border-right: 1px solid #eff0f2;
+  }
+}

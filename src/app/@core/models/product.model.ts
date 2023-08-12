@@ -1,3 +1,5 @@
+import {Brand} from "./brand.model";
+
 export interface Product {
   id: string;
   name?: string;
@@ -14,11 +16,6 @@ export interface Product {
   categorys?: Category[];
   keywords?: string[];
   stock?: number;
-}
-
-export interface Brand {
-  id: string;
-  name: string;
 }
 
 export interface Category {

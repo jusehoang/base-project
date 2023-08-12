@@ -4,12 +4,14 @@ import { catchError, finalize, map, mergeMap, Observable, retry, throwError } fr
 import { AuthenticationService } from "src/app/@service/authentication.service";
 import { InterceptorHttpParams, RequestOptions } from "src/app/@service/http.service";
 import { LoadingService } from "src/app/@service/loading.service";
+import { MessageService } from "src/app/@service/message.service";
 
 @Injectable()
 export class GlobalHttpInterceptor implements HttpInterceptor {
   constructor(
     private loadingService: LoadingService,
-    private authenticationService: AuthenticationService
+    private authenticationService: AuthenticationService,
+    private messageService: MessageService
   ) {}
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     let requestOptions: RequestOptions;
@@ -20,7 +22,8 @@ export class GlobalHttpInterceptor implements HttpInterceptor {
     }
 
     let headers = req.headers;
-    if ((req.method.toLowerCase() === 'post' || req.method.toLowerCase() === 'put') && !(req.body instanceof FormData)) {
+    if ((req.method.toLowerCase() === 'post' || req.method.toLowerCase() === 'put' ||
+         req.method.toLowerCase() === 'get' || req.method.toLowerCase() === 'delete') && !(req.body instanceof FormData)) {
       headers = headers.set('Content-Type', 'application/json');
     }
 
@@ -52,7 +55,10 @@ export class GlobalHttpInterceptor implements HttpInterceptor {
       map((event: HttpEvent<any>) => {
         return event;
       }),
-      catchError((error: HttpErrorResponse) => {
+      catchError((error: { status: number, message: string}) => {
+        this.messageService.showMessage({
+          content: error.message
+        })
         return throwError(() => error);
       }),
       finalize(() => {

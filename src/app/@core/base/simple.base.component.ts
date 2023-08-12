@@ -5,6 +5,8 @@ import { each, reject } from "lodash";
 import { Observable, Subscription } from "rxjs";
 import { MessageService } from "src/app/@service/message.service";
 import { LanguageService } from 'src/app/@service/translate.service';
+import { LoadingService } from 'src/app/@service/loading.service';
+import {FormBuilder} from "@angular/forms";
 
 @Injectable({
   providedIn: "root"
@@ -20,12 +22,16 @@ export class SimpleBaseComponent implements OnDestroy {
   protected translateService: TranslateService;
   protected languageService: LanguageService;
   protected currentLanguage = 'vi';
+  protected loadingService: LoadingService;
+  protected formBuilder: FormBuilder;
   constructor(protected injector: Injector) {
     this.activatedRoute = this.injector.get(ActivatedRoute);
     this.messageService = this.injector.get(MessageService);
     this.translateService = this.injector.get(TranslateService);
     this.languageService = this.injector.get(LanguageService);
     this.router = this.injector.get(Router);
+    this.loadingService = this.injector.get(LoadingService);
+    this.formBuilder = this.injector.get(FormBuilder);
     this.init();
   }
 

@@ -20,5 +20,16 @@
     "quantity": "SỐ LƯỢNG",
     "total": "TỔNG",
     "action": "HÀNH ĐỘNG"
+  },
+  "admin": {
+    "sidebar": {
+      "manageWatch": "Quản lý đồng hồ",
+      "manageBrand": "Quản lý thương hiệu"
+    },
+    "manageBrand": {
+      "id": "ID",
+      "name": "Tên thương hiệu",
+      "action": "Chức năng"
+    }
   }
 }

@@ -1,0 +1,18 @@
+<div class="layout-container">
+  <nz-layout>
+    <nz-sider nzTheme="light" [nzWidth]="270">
+      <app-sidebar></app-sidebar>
+    </nz-sider>
+    <nz-layout>
+      <nz-header>
+        <app-header-admin></app-header-admin>
+      </nz-header>
+      <nz-content>
+        <div class="content-container">
+          <router-outlet></router-outlet>
+        </div>
+      </nz-content>
+      <nz-footer>Footer</nz-footer>
+    </nz-layout>
+  </nz-layout>
+</div>

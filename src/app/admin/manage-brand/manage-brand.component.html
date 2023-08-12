@@ -1,0 +1,19 @@
+<div class="">
+  <nz-table #basicTable [nzData]="brands" nzBordered nzShowPagination (nzPageIndexChange)="pageIndexChange($event)" [nzPageSize]="pageParams.size"
+            [nzPageIndex]="pageParams.page" nzSize="small">
+    <thead>
+    <tr>
+      <th>{{ 'admin.manageBrand.id' | translate }}</th>
+      <th>{{ 'admin.manageBrand.name' | translate }}</th>
+      <th nzWidth="200px">{{ 'admin.manageBrand.action' | translate }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{ data?.id || '' }}</td>
+      <td>{{ data?.name || '' }}</td>
+      <td></td>
+    </tr>
+    </tbody>
+  </nz-table>
+</div>

@@ -15,6 +15,7 @@ import { GlobalHttpInterceptor } from './@core/interceptor/http.interceptor';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import {LoadingComponent} from "./@themes/component/loading/loading.component";
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
@@ -23,34 +24,37 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 registerLocaleData(vi);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
-    NgxSpinnerModule.forRoot({type: 'ball-clip-rotate'}),
-    ThemeModule,
-    ReactiveFormsModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      }
-    })
-  ],
-  providers: [
-    { provide: NZ_I18N, useValue: vi_VN },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: GlobalHttpInterceptor,
-      multi: true
-    }
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        HttpClientModule,
+        BrowserAnimationsModule,
+        NgxSpinnerModule.forRoot({type: 'ball-clip-rotate'}),
+        ThemeModule,
+        ReactiveFormsModule,
+        TranslateModule.forRoot({
+            loader: {
+                provide: TranslateLoader,
+                useFactory: HttpLoaderFactory,
+                deps: [HttpClient],
+            }
+        }),
+        LoadingComponent
+    ],
+    providers: [
+        {provide: NZ_I18N, useValue: vi_VN},
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: GlobalHttpInterceptor,
+            multi: true
+        }
+    ],
+    exports: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

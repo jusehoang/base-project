@@ -69,7 +69,7 @@ export class MessageService extends subscribeable(Object) {
     })
   }
 
-  calculateModalOptions(message: Message, subscriber?: Subscriber<boolean>) {
+  private calculateModalOptions(message: Message, subscriber?: Subscriber<boolean>) {
     const m: Message = assignIn({}, DEFAULT_MESSAGE, message);
     const options: ModalOptions = {
       nzTitle: m.title,

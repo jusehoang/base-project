@@ -37,7 +37,10 @@
               "src/theme.less",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "lodash"
+            ]
           },
           "configurations": {
             "production": {
@@ -74,6 +77,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "../base-project/proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "browserTarget": "fruit:build:production"

@@ -11,6 +11,6 @@ export class TestApi {
   ) {}
 
   getAllProducts() {
-    return this.httpService.get('https://dummyjson.com/products');
+    return this.httpService.get('https://dummyjson.com/products', { hideLoading: true });
   }
 }
